@@ -164,6 +164,13 @@ def commande():
 
     return render_template("commande.html", commande=commande, cart_quantity=cart_quantity)
 
+@app.route("/commandes")
+def voir_commandes():
+    conn = get_db_connection()
+    commandes = conn.execute("SELECT * FROM commandes").fetchall()
+    conn.close()
+
+    return render_template("commandes.html", commandes=commandes)
 
 init_db()
 
