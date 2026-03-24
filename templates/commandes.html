@@ -1,1 +1,26 @@
+<h1>Commandes reçues</h1>
 
+<table border="1">
+  <tr>
+    <th>ID</th>
+    <th>Nom</th>
+    <th>Prénom</th>
+    <th>Email</th>
+    <th>Produit</th>
+    <th>Quantité</th>
+    <th>Total</th>
+  </tr>
+
+  {% for c in commandes %}
+  <tr>
+    <td>{{ c.id }}</td>
+    <td>{{ c.nom }}</td>
+    <td>{{ c.prenom }}</td>
+    <td>{{ c.email }}</td>
+    <td>{{ c.produit }}</td>
+    <td>{{ c.quantite }}</td>
+    <td>{{ c.total }} €</td>
+  </tr>
+  {% endfor %}
+
+</table>
