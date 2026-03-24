@@ -165,6 +165,7 @@ def commande():
     return render_template("commande.html", commande=commande, cart_quantity=cart_quantity)
 
 
+init_db()
+
 if __name__ == "__main__":
-    init_db()
-    app.run(debug=True)
+    app.run()
